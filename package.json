@@ -1,0 +1,19 @@
+{
+  "name": "jycs-frontend",
+  "version": "1.0.0",
+  "description": "A beautiful movie.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hhzh/jycs-frontend.git"
+  },
+  "author": "hhzh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hhzh/jycs-frontend/issues"
+  },
+  "homepage": "https://github.com/hhzh/jycs-frontend#readme"
+}
