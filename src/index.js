@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'antd/dist/antd.css';
+import Home from './components/Home';
 
 export default class Index extends React.Component {
     render() {
         return (
-            <div>
-            </div>
+            <Home/>
         );
     };
 }
 
-ReactDOM.render(<Index/>, document.getElementById('mainContainer'));
+ReactDOM.render(<Index/>, document.getElementById('root'));
