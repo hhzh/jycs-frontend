@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'antd/dist/antd.css';
 // import asyncComponent from "./AsyncComponent";
 import HomePage from './components/HomePage';
 
