@@ -19,18 +19,7 @@ module.exports = {
             },
             //下面是使用 ant-design 的配置文件
             {test: /\.css$/, loader: 'style-loader!css-loader'}
-        ],
-        rules: [{
-            test: /\.js$/,
-            exclude: /(node_modules|bower_components)/,
-            use: 'babel-loader'
-        }, {
-            test: /\.(less|css)$/,
-            use: ["style-loader", "css-loader", "less-loader"]
-        }, {
-            test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
-            use: ['file-loader?limit=1000&name=files/[md5:hash:base64:10].[ext]']
-        }]
+        ]
     },
     output: {
         path: __dirname + '/src/',
