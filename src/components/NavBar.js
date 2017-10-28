@@ -17,7 +17,7 @@ import {
 } from 'antd';
 import {BrowserRouter, Route, Link, NavLink} from 'react-router-dom';
 
-const {Header, Content, Footer} = Layout;
+const {Header, Content, Footer,Sider} = Layout;
 
 export default class NavBar extends React.Component {
     constructor() {
@@ -25,6 +25,18 @@ export default class NavBar extends React.Component {
     }
 
     render() {
+        const settings = {
+            customPaging: function(i) {
+                return <a><img src={`/src/img/abstract0${i+1}.jpg`}/></a>
+            },
+            dots: true,
+            dotsClass: 'slick-dots slick-thumb',
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        };
+
         return (
             <Layout>
                 <Header style={{position: 'fixed', width: '100%'}}>
@@ -47,21 +59,23 @@ export default class NavBar extends React.Component {
                         </Col>
                     </Row>
                 </Header>
-                <Row style={{height: '426px'}}>
+                <Row style={{lineHeight: '426px',textAlign: 'center', marginTop: '64px'}}>
                     <Col span={2}/>
-                    <Col span={20}>
-                        <Content style={{height: '426px',marginTop:'64px'}}>
-                            <Carousel vertical autoplay={true}>
-                                <div><img src="/src/img/1.jpg"/>1</div>
-                                <div><img src="/src/img/2.jpg"/>2</div>
-                                <div><img src="/src/img/3.jpg"/>3</div>
-                                <div><img src="/src/img/4.jpg"/>4</div>
-                                <div><img src="/src/img/5.jpg"/>5</div>
+                    <Col span={16}>
+                        <div className="carousel">
+                            <Carousel vertical autoplay={true} dots={true} accessibility={true} adaptiveHeight={true} arrows={true} {...settings}>
+                                <div><img src="/src/img/1.jpg"/></div>
+                                <div><img src="/src/img/2.jpg"/></div>
+                                <div><img src="/src/img/3.jpg"/></div>
+                                <div><img src="/src/img/4.jpg"/></div>
+                                <div><img src="/src/img/5.jpg"/></div>
                             </Carousel>
-                        </Content>
+                        </div>
                     </Col>
                 </Row>
-
+                <Content style={{height: '426px', marginTop: '64px',textAlign: 'center'}}>
+                    内容
+                </Content>
                 <Footer style={{textAlign: 'center'}}>
                     Ant Design ©2016 Created by Ant UED
                 </Footer>
